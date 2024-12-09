@@ -1,5 +1,6 @@
 
 * {
+  box-sizing: border-box;
   z-index: 2;
   font: 98%;
   font-family: 'Product Sans', sans-serif !important;
@@ -15,6 +16,9 @@ a {
 }
 
 
+.container {
+  max-width: 100%;
+}
 /* Bat dau phan header  */
 
 .header.container {
@@ -30,12 +34,12 @@ a {
 /* Header navigation bar */
 
 .navibar .company_logo{
-  margin-left: 1.5rem;
   display: flex;
   margin-top: 0;
 }
 
 .navibar {
+  margin-left: 4rem;
   height: 5rem;
   padding-top: 1.5rem;
   display: flex;
@@ -143,7 +147,7 @@ a {
   height: 37rem;
   background-color: white;
   border-radius: 2.5rem;
-  box-shadow: 0px 0px 10px 10px #788F9C40 ;
+  box-shadow: 0 0 10px 10px #788F9C40 ;
 }
 
 .content_product .product_info img {
@@ -193,7 +197,7 @@ a {
   display: flex;
   align-items: center;
   position: relative;
-  top: 6.5rem;
+  top: 10rem;
   left:8.5rem;
   width: 460px;
 }
@@ -240,12 +244,39 @@ a {
   height: 4rem;
   width: 9rem;
   top: 55rem;
-  left:44rem;
+  left:42rem;
 }
-/* .hero {
-    position: relative;
-    background: linear-gradient(135deg, #74ebd5, #acb6e5);
-    color: #fff;
-    padding: 3rem 1rem;
-    text-align: center;
-  } */
+
+/* 
+Second section: Showing all product
+*/
+
+.section_one {
+  height: 55rem;
+  margin-top: 8rem;
+  color: black;
+}
+
+.lvl_1 {
+  color: #31546D;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.page_bar {
+  margin-top: 1rem;
+  position: relative;
+  left: 46rem;
+}
+
+.section_one .flex .flex {
+  margin: 0.5rem;
+}
