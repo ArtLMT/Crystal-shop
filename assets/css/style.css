@@ -1,7 +1,7 @@
 
 * {
   box-sizing: border-box;
-  z-index: 2;
+  z-index: 0;
   font-family: 'Product Sans', sans-serif !important;
   font-family: 'Product Sans Thin', sans-serif ;
   font-family: 'Product Sans Light', sans-serif ;
@@ -76,6 +76,7 @@ body {
 }
 
 .navibar .navibar-list .list-button {
+  color: #fff;
   width: 7vw;
   padding: 1vw;
   font-size: 1.9rem;
@@ -258,7 +259,7 @@ Second section: Showing all product
 */
 
 .section-one {
-  height: 600px;
+  height: 1200px;
   margin-top: 80px;
   color: black;
 }
@@ -303,11 +304,13 @@ Second section: Showing all product
 .product-fillter .sub-fillter {
   color: #31546D !important;
   font-weight: 600;
+  margin-right: 5px;
 }
 
 .product-sort .sub-sort {
   color: #31546D !important;
   font-weight: 600;
+  margin-right: 5px;
 }
 
 .product-list {
@@ -323,6 +326,7 @@ Second section: Showing all product
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: #31546d28 groove 1px;
   height: 412px;
   width:322px;
   border-radius: 30px;
@@ -374,4 +378,23 @@ Second section: Showing all product
   color:#317189;
   margin: 5px;
   font-weight: 900;
+}
+
+.advertising {
+  max-width: 100%;
+  height: 980px;
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.advertising .curve-2 {
+  /* background-image: url(../icon/curve2.svg); */
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  /* left:-1.5 */
+  /* bottom: -900px; */
 }
