@@ -1,7 +1,7 @@
 
 * {
   box-sizing: border-box;
-  z-index: 0;
+  
   font-family: 'Product Sans', sans-serif !important;
   font-family: 'Product Sans Thin', sans-serif ;
   font-family: 'Product Sans Light', sans-serif ;
@@ -23,10 +23,15 @@ body {
   font-size: 1.6rem;
 }
 
-.container {
-  max-width: 1440px;
-}
+/* .container {
+  max-width: 100%;
+} */
 /* Bat dau phan header  */
+
+header {
+  display: flex;
+  flex-direction: column;
+}
 
 .header.container {
   max-width: 100%;
@@ -58,7 +63,7 @@ body {
   align-items: center;
 }
 
-.navibar .company-logo p{
+.navibar .company-logo p {
   font-size: 1.9rem;
   color: white;
   font-weight: 100;
@@ -111,6 +116,7 @@ body {
 }
 
 .header-content .content-info p {
+  z-index: 1;
   margin-top: 40px;
   line-height: 30px;
   width: 470px;
@@ -126,6 +132,8 @@ body {
 }
 
 .button-shownow {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,7 +146,17 @@ body {
   font-weight: 700;
 }
 
+.button-shownow:hover{
+  color: white;
+  box-shadow: 0px 10px 25px rgba(112, 184, 251, 0.45);
+  background: linear-gradient(90deg, #75cceb, #6fb4ff);
+  border: none;
+  transition: 0.3s;
+}
+
 .button-aboutus {
+  position: relative;
+  z-index: 2;
   height: 60px;
   margin-left: 70px;
   font-size: 2rem;
@@ -151,7 +169,8 @@ body {
 /* Product recomendation section */
 
 .content-product {
-  margin-left: 170px;
+  position: relative;
+  left: 28%;
   justify-content: center;
   width: 550px;
   height: 550px;
@@ -204,7 +223,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  top: 95px;
+  top: 100px;
   left:135px;
   width: 300px;
 }
@@ -244,32 +263,47 @@ body {
   display: block;
   position: absolute; /* If not already positioned */
   top: 250px; /* Adjust positioning to fit your layout */
-}
+  /* left: -1%; */
+} 
 
 .header.container .scroll-down-icon {
   position: absolute;
   height: 200px;
   width: 200px;
-  top: 780px;
-  left: 40vw;
-  margin-left:50px;
+  top: 810px;
+  left: 44vw;
+  /* margin-left:50px; */
 }
 
 /* 
 Second section: Showing all product
 */
-
-.section-one {
+main {
+  margin-top:  100px ;
+  max-width: 99%;
+  /* height: 1800px; */
   display: flex;
   flex-direction: column;
-  height: 1200px;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url(../img/background.png);
+  background-repeat:repeat-y;
+  background-size: contain; */
+}
+.section-one {
+  max-width: 1440px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 1200px; */
   margin-top: 80px;
   color: black;
 }
 
 .lvl-1 {
   color: #31546D;
-  margin-left: 100px;
   font-size: 4rem;
   display: flex;
   align-items: center;
@@ -284,9 +318,8 @@ Second section: Showing all product
 
 .page-bar {
   margin-top: 10px;
-  position: relative;
-  left: 49vw;
-  width: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 /* apply margin for fitter section */
@@ -295,8 +328,10 @@ Second section: Showing all product
 }
 
 .section-one > .section-filter {
+  position: relative;
+  right: 48%;
   height: 50px;
-  margin-left: 50px
+  /* margin-left: 175px */
 }
 
 .section-one > .section-filter > .flex > p {
@@ -319,8 +354,9 @@ Second section: Showing all product
 
 .product-list {
   display: flex;
-  width: 1440px;
-  margin-left: 50px;
+  justify-content: center;
+  /* width: 1440px; */
+
   margin-top: 100px;
   flex-wrap: wrap;
 }
@@ -340,6 +376,7 @@ Second section: Showing all product
 
 .list-container:hover{
   box-shadow: 0px 4px 50px rgba(120, 143, 156, 0.25);
+  transition: 0.3s;
 }
 
 .product-list .list-container > img {
@@ -370,24 +407,19 @@ Second section: Showing all product
   box-shadow: 0px 10px 25px rgba(112, 184, 251, 0.45);
   background: linear-gradient(90deg, #75cceb, #6fb4ff);
   border: none;
+  transition: 0.3s;
 }
 
 .button-buynow:active {
   color: white;
   background: linear-gradient(90deg, #6fb4ff, #75cceb);
-  transition: 0.1s;
+  transition: 0.3s;
 }
 
 .list-container > div > p {
   color:#317189;
   margin: 5px;
   font-weight: 900;
-}
-
-.product-listall {
-  /* display: flex;
-  justify-content: center; */
-  margin-left: 48%;
 }
 
 .product-listall > a {
@@ -402,33 +434,34 @@ Second section: Showing all product
 
 .product-listall > a:hover{
   color: white;
-  box-shadow: 0px 5px 5px rgba(112, 184, 251, 0.45);
+  box-shadow: 0px 2px 2px rgba(112, 184, 251, 0.45);
   background: linear-gradient(90deg, #75cceb, #6fb4ff);
   border: none;
+  transition: 0.3s;
 }
 
 .advertising {
-  max-width: 100%;
-  height: 980px;
   background-image: url(../img/background.png);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 1200px;
+  z-index: 1;
   margin-top: 0;
   padding-top: 0;
   display: flex;
   flex-direction: column;
 }
 
-.advertising .curve-2 {
-  /* background-image: url(../icon/curve2.svg); */
+.curve-2 {
   position: relative;
-  width: 100%;
+  /* top: 1000px;  */
+  width: 99.8vw;
   z-index: 0;
 }
 
 .advertising .advertise-container {
   position: relative;
-  top: -850px;
+  bottom:900px;
   display: flex;
   justify-content: center;
 }
